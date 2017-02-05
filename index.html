@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+   <title>ARCO - Valuta nove generacije</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="lib/w3.css">
+   <link rel="stylesheet" href="lib/w3-theme-black.css">
+   <!--<link rel="stylesheet" src="lib/font-awesome.min.css">-->
+   <script src="lib/jquery-3.1.1.min.js"></script>
+   <!-- Samo za prikaz....v koncni verziji verjetno ne rabis -->
+   <script src="lib/w3data.js"></script>
+   <script>
+      $(function() {
+        $.ajax({
+            "url": "https://api.coinmarketcap.com/v1/ticker/aquariuscoin/",
+            "dataType": "json",
+        })
+        .done(function(data) {
+            var received = {
+                "coin_data": data,
+            };
+            w3DisplayData("live_data", received);
+        })
+      })
+   </script>
+   <body>
+      <script>
+         function prikazi_info(id) {
+             var x = document.getElementById(id);
+             if (x.className.indexOf("w3-show") == -1) {
+                 x.className += " w3-show";
+                 x.previousElementSibling.className += " w3-red";
+             } else { 
+                 x.className = x.className.replace(" w3-show", "");
+                 x.previousElementSibling.className = 
+                 x.previousElementSibling.className.replace(" w3-red", "");
+             }
+         }
+      </script>
+      <!-- Header -->
+      <header class="w3-container w3-light-grey w3-hover-blue-grey w3-padding" id="myHeader">
+         <!-- Logo size for diffrent screens -->
+         <div class="w3-container w3-quarter w3-hide-small w3-hide-medium">
+            <!-- Large screen -->
+            <img src="pic/arco_logo.png" alt="logo">
+         </div>
+         <div class="w3-container w3-quarter w3-hide-small w3-hide-large w3-center">
+            <!--Medium-->
+            <img src="pic/arco_logo-s.png" alt="logo">
+         </div>
+         <div class="w3-container w3-quarter w3-hide-large w3-hide-medium w3-center">
+            <!--Small-->
+            <img src="pic/arco_logo-s.png" alt="logo">
+         </div>
+         <!---->
+         <div class="w3-xxxlarge w3-center w3-container w3-threequarter w3-padding-top">
+            <h1>Aquarius coin - ARCO</h1>
+            <h4 class="w3-xxxlarge w3-animate-bottom w3-dark-grey w3-opacity"><b>Decentralizirana kriptovaluta</b></h4>
+            <div class="w3-padding-32">
+               <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Prenesi denarnico</button>
+            </div>
+         </div>
+      </header>
+      <!-- Modal -->
+      <div id="id01" class="w3-modal">
+         <div class="w3-modal-content w3-card-8 w3-animate-top">
+            <header class="w3-container w3-theme-l1">
+               <span onclick="document.getElementById('id01').style.display='none'" class="w3-closebtn">X</span>
+               <div class="w3-center">
+                  <h5>Izberi primerno svojemu operacijskemu sistemu.</h5>
+            </header>
+            <div id="coin_wall_dwn" class="w3-row">
+                <div class="w3-third w3-container w3-center w3-card-2 w3-padding-top w3-hide-small">
+                    <a href="https://github.com/AquariusNetwork/ARCO/releases/download/v2.0.0/ArcoWinSetup.exe">
+                    <img src="pic/windows.png" alt="windows arco wallet">
+                    <h2>Windows</h2>
+                    </a>
+                </div>
+                <div class="w3-third w3-container w3-center w3-card-2 w3-padding-top w3-hide-small">
+                    <a href="https://github.com/AquariusNetwork/ARCO/archive/v2.0.0.tar.gz">
+                    <img src="pic/linux-logo.png" alt="linux arco wallet">
+                    <h2>Linux</h2> 
+                    </a>
+                </div>
+                <div class="w3-third w3-container w3-center w3-card-2 w3-padding-top w3-hide-small">
+                    <a href="https://github.com/AquariusNetwork/ARCO/releases/download/v2.0.0/AquariusCoin-Qt-OSX-v2000.dmg">
+                    <img src="pic/apple.png" alt="ios mac apple wallet">
+                    <h2>MacOS</h2>
+                    </a>
+                </div>
+            <!-- Mobile aplikacije in paperwallet -->
+            <div class"w3-row">
+                    <div class="w3-third w3-center w3-card-2 w3-padding-top">
+                        <a href="https://github.com/AquariusNetwork/ARCO/releases/tag/v2.0.0">
+                        <img src="pic/printer.png" alt="paper wallet arco">
+                        <h2> Papirnata denarnica</h2> </a>
+                    </div>
+                    <div class="w3-third w3-center w3-card-2 w3-padding-top">
+                        <a href="https://github.com/AquariusNetwork/ARCO/releases/tag/v2.0.0">
+                        <img src="pic/android.png" alt="android wallet arco">
+                        <h2> Android </h2> </a>
+                    </div>
+                    <div class="w3-third w3-center w3-card-2 w3-padding-top">
+                        <a href="https://github.com/AquariusNetwork/ARCO/releases/tag/v2.0.0">
+                        <img src="pic/app-store.png" alt="ios iphone wallet arco">
+                        <h2> IoS </h2> </a>
+                    </div>
+            </div>
+            </div>
+            <footer class="w3-container w3-theme-l1">
+            <p></p>
+            </footer>
+            </div>
+         </div>
+         <!-- -->
+      <div class="w3-row-padding w3-center w3-margin-top">
+         <div class="w3-third">
+            <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+               <h4><b>Specifikacije</b></h4>
+               <img src="pic/icons2.gif" alt="value">
+               <p>Algoritem:  Scrypt</p>
+               <p>Tip:        POS</p>
+               <p>POS obresti: 6% / leto +  1 ARCO na stake (razpolovitev vsakih 5 let)</p>
+               <p>Max št.: 42000000 ARCO</p>
+               <p>Potrditev: 3 bloke</p>
+               <p>Blok dozori po: 20 blokih</p>
+               <p>Ciljna hitrost med bloki: 64 sec</p>
+               <p>RPC port: 6206</p>
+               <p>P2P port: 6205</p>
+               <br>
+            </div>
+         </div>
+         <div class="w3-third">
+            <div class="w3-card-2 w3-padding-top" style="min-height:490px">
+               <h4><b>Borze</b></h4>
+               <img src="pic/icons4.gif" alt="value"><br><br>
+               <h6>Kje lahko trgujete z ARCOm.</h6>
+               <p>Trenutno lahko izbirate med: </p>
+                <p><a href="https://yobit.net/en/trade/ARCO/BTC"><span class="w3-tag w3-xlarge w3-teal"><button class="w3-btn w3-large w3-teal">YoBit.net</button></span></a></p>
+                <p><a href="https://goo.gl/Yc78k2"><span class="w3-tag w3-xlarge w3-teal"><button class="w3-btn w3-large w3-teal">Cryptopia.co.nz</button></span></a></p>
+                <br>
+               <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue">
+                  <p>
+                  <center> Kmalu tudi drugje. </center>
+                  </p>
+               </div>
+               <br><br><br>
+            </div>
+         </div>
+         <div class="w3-third">
+            <div class="w3-card-2 w3-padding-top" style="min-height:460px">
+               <h4><b>Blok explorer</b></h4>
+               <img src="pic/icons3.gif" alt="value"><br>
+               <a href="https://chainz.cryptoid.info/arco/">
+               <img src="pic/cryptoid.png" alt="value"></a>
+               <br><br><br>
+               <h4><b>Odprokodnost</b></h4>
+               <div class="w3-panel">
+                  <p>ARCO programska koda je dostopna vsem na strani github.com</p>
+                  <a href="https://github.com/AquariusNetwork/ARCO">
+                  <img src="pic/icons1.gif" alt="value"></a>
+               </div>
+               <br><br>
+            </div>
+         </div>
+      </div>
+      <div class="w3-container w3-gray w3-padding-top w3-padding-bottom w3-padding-4">
+         <br>
+         <div class="w3-row">
+            <div class=" w3-container w3-quarter">
+               <p></p>
+            </div>
+            <div class="w3-container w3-half w3-center w3-round-large">
+               <div>
+                  <button onclick="prikazi_info('basic_info')" class="w3-btn-block w3-teal w3-round-jumbo">
+                     <p class="w3-text-white">Več splošnih informacij o kripto valutah</p>
+                  </button>
+                  <div id="basic_info" class="w3-accordion-content w3-container w3-center w3-light-gray w3-animate-opacity">
+                     <p>Kripto valute živijo znotraj internetnega omrežja, delujejo preko peer to peer komunikacije, katero zagotavljajo nodi. 
+                         Nod je računalnik z nameščeno programsko opremo in zapisom vseh transakcij, ki so se zgodile od pričetka obratovanja. 
+                         V osnovi omrežje podpira določeno število glavnih nodov, katerim se lahko pridružite tudi vi, ko namestite denarnico na računalnik in
+                         na svojem internetnem usmerjevalniku ("router") pa omogočite povezavo komunikacijskih vratih kripto kovanca. S tem podpirate omrežje
+                          in skrbite, da se transakcije zapisujejo v bloke, te pa zapišemo v blockchain ( verigo blokov ). Primer: Uporabnik A pošlje B-ju 120 
+                          ARCO kovancev. Da se to zgodi, mora B poslati A-ju svojo "bančno številko" oz. naslov denarnice ( AKs9PA6SFCbhNDdYa3Zut2AmB1EN9Sp8sB ).
+                           A pošlje kovance. Transakcija se zapiše v blok, ker pa je varnostni mehanizem naštiman na potrditev treh blokov kateri imajo 
+                           razmaka med eni im drugim 64 sekund, traja celotna transakcija 192 sec. Po tem času se uporabniku B spremeni stanje. 
+                           Transakcije delujejo 24 ur na dan, vse dni v letu, kar je ena največjih prednosti decentralizirane kripto valute.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="w3-container w3-quarter">
+               <p></p>
+            </div>
+         </div>
+      </div>
+      <!-- API od coinmarket.com -->
+      <div id="live_data" class="w3-row w3-row-padding w3-gray">
+         <div class="w3-card-8 w3-padding-top w3-light-blue w3-padding-left w3-padding-right w3-round-xlarge" style="min-height:300px">
+            <div class="w3-row ">
+               <div class="w3-light-gray w3-container w3-quarter w3-padding-bottom w3-round-xlarge">
+                  <br>
+                  <div class="w3-card-16 w3-blue-grey w3-center w3-round-xlarge" w3-repeat="coin_data"  style="min-height:180px">
+                     <p>
+                     <h3>Vrednost ARCO: </h3>
+                     </p>
+                     <p><b  w3-repeat="coin_data">{{price_btc}} BTC</b></p>
+                     <p class="w3-slim">"Vrednost posameznega ARCO-ta v bitcoinih."</p>
+                  </div>
+                  <br>
+               </div>
+               <div class="w3-light-gray w3-container w3-quarter w3-padding-bottom w3-round-xlarge">
+                  <br>
+                  <div class="w3-card-16 w3-blue-grey w3-center w3-round-xlarge" style="min-height:180px">
+                     <p>
+                     <h3>Kapital: </h3>
+                     </p>
+                     <p><b w3-repeat="coin_data">{{market_cap_usd}} $</b></p>
+                     <p class="w3-slim">"Vrednost vseh kovancev skupaj v dollarjih."</p>
+                  </div>
+                  <br>
+               </div>
+               <div class=" w3-light-gray w3-container w3-quarter w3-padding-bottom w3-round-xlarge">
+                  <br>
+                  <div class="w3-card-16 w3-blue-grey w3-center w3-round-xlarge" style="min-height:180px">
+                     <p>
+                     <h3>Sprememba vrednosti: </h3>
+                     </p>
+                     <p><b w3-repeat="coin_data">{{percent_change_24h}} %</b></p>
+                     <p class="w3-slim">"Spremembe vrednosti kovanca v zadnjih 24 urah."</p>
+                  </div>
+                  <br>
+               </div>
+               <div class=" w3-light-gray w3-container w3-quarter w3-padding-bottom w3-round-xlarge">
+                  <br>
+                  <div class="w3-card-16 w3-blue-grey w3-center w3-round-xlarge" style="min-height:180px">
+                     <p>
+                     <h3>Sprememba vrednosti: </h3>
+                     </p>
+                     <p><b w3-repeat="coin_data">{{percent_change_7d}} %</b></p>
+                     <p class="w3-slim">"Spremembe vrednosti kovanca v zadnjih 7 dneh."</p>
+                  </div>
+                  <br>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Footer -->
+      <div class="w3-gray">
+         <footer class="w3-container w3-theme-dark w3-padding-16 w3-round-large ">
+            <div class="w3-container">
+               <center>Sledite nam na:</center>
+               <div class="w3-row">
+                  <div class="w3-quarter">
+                     <p></p>
+                  </div>
+                  <div class="w3-half w3-container w3-light-gray w3-center w3-round-xlarge w3-padding-12">
+                     <a href="https://www.facebook.com/aquarius.coin/">
+                     <img src="pic/facebook.png" alt="facebook"></a>
+                     <a href="https://bitcointalk.org/index.php?topic=1694341">
+                     <img src="pic/btct2.gif" alt="btct2"></a>
+                     <a href="https://twitter.com/ArcCoin">
+                     <img src="pic/twitter.png" alt="twitter"></a>
+                  </div>
+                  <div class="w3-quarter">
+                     <p></p>
+                  </div>
+               </div>
+               <p class="w3-right-align"> &#169; 2016/17 coin.si</p>
+            </div>
+         </footer>
+      </div>
+   </body>
+</html>
