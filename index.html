@@ -12,7 +12,7 @@
    <script>
       $(function() {
         $.ajax({
-            "url": "https://api.coinmarketcap.com/v1/ticker/aquariuscoin/",
+            "url": "https://api.coinmarketcap.com/v1/ticker/lanacoin/",
             "dataType": "json",
         })
         .done(function(data) {
@@ -54,7 +54,7 @@
          </div>
          <!---->
          <div class="w3-xxxlarge w3-center w3-container w3-threequarter w3-padding-top">
-            <h1>Aquarius coin - ARCO</h1>
+            <h1>LanaCoin - LANA</h1>
             <h4 class="w3-xxxlarge w3-animate-bottom w3-dark-grey w3-opacity"><b>Decentralizirana kriptovaluta</b></h4>
             <div class="w3-padding-32">
                <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Prenesi denarnico</button>
@@ -118,8 +118,8 @@
             <div class="w3-card-2 w3-padding-top" style="min-height:460px">
                <h4><b>Specifikacije</b></h4>
                <img src="pic/icons2.gif" alt="value">
-               <p>Algoritem:  Scrypt</p>
-               <p>Tip:        POS</p>
+               <p>Algoritem:  Sha256</p>
+               <p>Tip:        POW/POS</p>
                <p>POS obresti: 6% / leto +  1 ARCO na stake (razpolovitev vsakih 5 let)</p>
                <p>Max št.: 42000000 ARCO</p>
                <p>Potrditev: 3 bloke</p>
@@ -134,9 +134,9 @@
             <div class="w3-card-2 w3-padding-top" style="min-height:490px">
                <h4><b>Borze</b></h4>
                <img src="pic/icons4.gif" alt="value"><br><br>
-               <h6>Kje lahko trgujete z ARCOm.</h6>
+               <h6>Kje lahko trgujete z LanaCoin.</h6>
                <p>Trenutno lahko izbirate med: </p>
-                <p><a href="https://yobit.net/en/trade/ARCO/BTC"><span class="w3-tag w3-xlarge w3-teal"><button class="w3-btn w3-large w3-teal">YoBit.net</button></span></a></p>
+                <p><a href="https://yobit.net/en/trade/LANA/BTC"><span class="w3-tag w3-xlarge w3-teal"><button class="w3-btn w3-large w3-teal">YoBit.net</button></span></a></p>
                 <p><a href="https://goo.gl/Yc78k2"><span class="w3-tag w3-xlarge w3-teal"><button class="w3-btn w3-large w3-teal">Cryptopia.co.nz</button></span></a></p>
                 <br>
                <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue">
@@ -151,13 +151,13 @@
             <div class="w3-card-2 w3-padding-top" style="min-height:460px">
                <h4><b>Blok explorer</b></h4>
                <img src="pic/icons3.gif" alt="value"><br>
-               <a href="https://chainz.cryptoid.info/arco/">
+               <a href="https://chainz.cryptoid.info/lana/">
                <img src="pic/cryptoid.png" alt="value"></a>
                <br><br><br>
                <h4><b>Odprokodnost</b></h4>
                <div class="w3-panel">
                   <p>ARCO programska koda je dostopna vsem na strani github.com</p>
-                  <a href="https://github.com/AquariusNetwork/ARCO">
+                  <a href="https://github.com/LanaCoin/lanacoin/releases">
                   <img src="pic/icons1.gif" alt="value"></a>
                </div>
                <br><br>
@@ -181,7 +181,7 @@
                          V osnovi omrežje podpira določeno število glavnih nodov, katerim se lahko pridružite tudi vi, ko namestite denarnico na računalnik in
                          na svojem internetnem usmerjevalniku ("router") pa omogočite povezavo komunikacijskih vratih kripto kovanca. S tem podpirate omrežje
                           in skrbite, da se transakcije zapisujejo v bloke, te pa zapišemo v blockchain ( verigo blokov ). Primer: Uporabnik A pošlje B-ju 120 
-                          ARCO kovancev. Da se to zgodi, mora B poslati A-ju svojo "bančno številko" oz. naslov denarnice ( AKs9PA6SFCbhNDdYa3Zut2AmB1EN9Sp8sB ).
+                          LANA kovancev. Da se to zgodi, mora B poslati A-ju svojo "bančno številko" oz. naslov denarnice ( AKs9PA6SFCbhNDdYa3Zut2AmB1EN9Sp8sB ).
                            A pošlje kovance. Transakcija se zapiše v blok, ker pa je varnostni mehanizem naštiman na potrditev treh blokov kateri imajo 
                            razmaka med eni im drugim 64 sekund, traja celotna transakcija 192 sec. Po tem času se uporabniku B spremeni stanje. 
                            Transakcije delujejo 24 ur na dan, vse dni v letu, kar je ena največjih prednosti decentralizirane kripto valute.
@@ -205,7 +205,7 @@
                      <h3>Vrednost ARCO: </h3>
                      </p>
                      <p><b  w3-repeat="coin_data">{{price_btc}} BTC</b></p>
-                     <p class="w3-slim">"Vrednost posameznega ARCO-ta v bitcoinih."</p>
+                     <p class="w3-slim">"Vrednost posameznega LanaCoin-a v bitcoinih."</p>
                   </div>
                   <br>
                </div>
@@ -255,11 +255,11 @@
                      <p></p>
                   </div>
                   <div class="w3-half w3-container w3-light-gray w3-center w3-round-xlarge w3-padding-12">
-                     <a href="https://www.facebook.com/aquarius.coin/">
+                     <a href="https://www.facebook.com/LanaCoins/">
                      <img src="pic/facebook.png" alt="facebook"></a>
-                     <a href="https://bitcointalk.org/index.php?topic=1694341">
+                     <a href="https://bitcointalk.org/index.php?topic=1448065.0">
                      <img src="pic/btct2.gif" alt="btct2"></a>
-                     <a href="https://twitter.com/ArcCoin">
+                     <a href="https://twitter.com/LanaCoin">
                      <img src="pic/twitter.png" alt="twitter"></a>
                   </div>
                   <div class="w3-quarter">
