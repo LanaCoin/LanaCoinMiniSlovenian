@@ -1,2 +1,2 @@
-# AquariusCoin Slovenija Onepage info 
-https://aquarius.coin.si/
+# LAnaCoin Slovenija Onepage info 
+https://lana.coin.si/
